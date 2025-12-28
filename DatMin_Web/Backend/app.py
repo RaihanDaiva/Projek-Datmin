@@ -1,5 +1,6 @@
 from flask import Flask, send_from_directory, jsonify
 import os
+from vsm import vector_space_model
 
 from flask_cors import CORS
 

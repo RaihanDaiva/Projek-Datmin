@@ -79,67 +79,104 @@ def list_documents():
 # ======================
 # API: SEARCH QUERY (VSM)
 # ======================
-@app.route("/search", methods=["POST"])
-def search():
-    data = request.get_json()
-    query = data.get("query", "").strip()
-
-    if not query:
-        return jsonify([])
-
-    # Load & preprocessing dokumen
-    documents_raw, file_names = load_documents()
-    doc_tokens = pipeline.process_documents(documents_raw)
-
-    # VSM
-    vsm = VectorSpaceModel(doc_tokens)
-
-    # Preprocess query
-    query_tokens = pipeline.process_query(query)
-    query_string = " ".join(query_tokens)
-
-    # Matching
-    results = vsm.match(query_string)
-
-    # Format output (untuk frontend)
-    response = []
-    for rank, (doc_id, score) in enumerate(results, start=1):
-        response.append({
-            "documentId": doc_id,
-            "documentName": file_names[doc_id],
-            "similarity": round(score * 100, 2),  # persen
-            "rank": rank,
-            "source": "server"
-        })
-
-    return jsonify(response)
-
 # @app.route("/search", methods=["POST"])
 # def search():
-#     query = request.json["query"]
+#     data = request.get_json()
+#     query = data.get("query", "").strip()
 
-#     # preprocess query
+#     if not query:
+#         return jsonify([])
+
+#     # Load & preprocessing dokumen
+#     documents_raw, file_names = load_documents()
+#     doc_tokens = pipeline.process_documents(documents_raw)
+
+#     # VSM
+#     vsm = VectorSpaceModel(doc_tokens)
+
+#     # Preprocess query
 #     query_tokens = pipeline.process_query(query)
 #     query_string = " ".join(query_tokens)
 
-#     # VSM
+#     # Matching
 #     results = vsm.match(query_string)
 
+#     # Format output (untuk frontend)
 #     response = []
-
-#     for doc_id, score in results:
-#         doc_text = documents_raw[doc_id]
-
-#         preprocessing_detail = pipeline.process_document_with_steps(doc_text)
-
+#     for rank, (doc_id, score) in enumerate(results, start=1):
 #         response.append({
-#             "doc_id": doc_id,
-#             "filename": file_names[doc_id],
-#             "similarity": round(score * 100, 2),
-#             "preprocessing": preprocessing_detail
+#             "documentId": doc_id,
+#             "documentName": file_names[doc_id],
+#             "similarity": round(score * 100, 2),  # persen
+#             "rank": rank,
+#             "source": "server"
 #         })
 
 #     return jsonify(response)
+
+@app.route("/search", methods=["POST"])
+def search():
+    # 1. Ambil data JSON dengan aman
+    data = request.get_json()
+    if not data or "query" not in data:
+         return jsonify({"error": "Query is required"}), 400
+         
+    query = data["query"].strip()
+
+    # 2. Cek jika query kosong
+    if not query:
+        return jsonify([])
+
+    # 3. Load & preprocessing dokumen
+    documents_raw, file_names = load_documents()
+    
+    # Pastikan file_names valid
+    if not file_names:
+        return jsonify({"error": "No documents found"}), 500
+
+    doc_tokens = pipeline.process_documents(documents_raw)
+
+    # 4. VSM
+    vsm = VectorSpaceModel(doc_tokens)
+
+    # 5. Preprocess query
+    query_tokens = pipeline.process_query(query)
+    query_string = " ".join(query_tokens)
+
+    # 6. Matching
+    results = vsm.match(query_string)
+
+    response = []
+
+    # 7. Loop hasil
+    for rank, (doc_id, score) in enumerate(results, start=1):
+        if doc_id < 0 or doc_id >= len(documents_raw):
+            continue
+
+        doc_text = documents_raw[doc_id]
+        
+        # Jalankan preprocessing detail
+        preprocessing_detail = pipeline.process_document_with_steps(doc_text)
+
+        # Ambil nama file
+        current_filename = file_names[doc_id] if doc_id < len(file_names) else "Unknown File"
+
+        response.append({
+            "doc_id": doc_id,
+            "documentName": current_filename,
+            "filename": current_filename,     
+            "similarity": round(score * 100, 2),
+            "rank": rank,
+            "preprocessing": preprocessing_detail,
+            
+            # --- PERBAIKAN DI SINI ---
+            # Menambahkan penanda bahwa ini adalah data dari server,
+            # sehingga UI tidak menampilkan logo upload.
+            "source": "server" 
+            # -------------------------
+        })
+
+    return jsonify(response)
 
 
 if __name__ == "__main__":

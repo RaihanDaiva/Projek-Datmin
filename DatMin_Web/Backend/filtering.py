@@ -70,3 +70,15 @@ class StopwordFilter:
             freq[token] = freq.get(token, 0) + 1
 
         return freq
+    
+    def filter_with_removed(self, tokens):
+        filtered = []
+        removed = []
+
+        for t in tokens:
+            if t in self.stopwords:
+                removed.append(t)
+            else:
+                filtered.append(t)
+
+        return filtered, removed

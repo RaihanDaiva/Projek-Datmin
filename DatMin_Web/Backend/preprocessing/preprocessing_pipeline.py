@@ -59,17 +59,32 @@ class PreprocessingPipeline:
         self.stopword_filter = stopword_filter
         self.stemmer = stemmer
 
+    # ===============================
+    # UNTUK VSM (list token saja)
+    # ===============================
+    def process_document(self, text):
+        tokens = self.tokenizer.process_text(text.lower())
+        tokens = self.stopword_filter.filter_tokens(tokens)
+        tokens = self.stemmer.stem_tokens(tokens)
+        return tokens
+
+    def process_documents(self, documents):
+        return [self.process_document(doc) for doc in documents]
+
+    def process_query(self, query):
+        return self.process_document(query)
+
+    # ===============================
+    # UNTUK DETAIL PREPROCESSING UI
+    # ===============================
     def process_document_with_steps(self, text):
-        # 1. Case folding
         case_folding = text.lower()
 
-        # 2. Tokenizing
         tokens = self.tokenizer.process_text(case_folding)
 
-        # 3. Filtering
-        filtered_tokens, removed_stopwords = self.stopword_filter.filter_with_removed(tokens)
+        filtered_tokens, removed_stopwords = \
+            self.stopword_filter.filter_with_removed(tokens)
 
-        # 4. Stemming
         stemmed = self.stemmer.stem_tokens(filtered_tokens)
 
         return {
@@ -79,7 +94,11 @@ class PreprocessingPipeline:
             "removed_stopwords": removed_stopwords,
             "filtered_tokens": filtered_tokens,
             "stemming": [
-                {"original": filtered_tokens[i], "stemmed": stemmed[i]}
+                {
+                    "original": filtered_tokens[i],
+                    "stemmed": stemmed[i]
+                }
                 for i in range(len(filtered_tokens))
             ]
         }
+

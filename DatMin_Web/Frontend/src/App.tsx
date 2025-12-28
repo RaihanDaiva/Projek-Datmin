@@ -10,6 +10,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('dataset');
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [processedText, setProcessedText] = useState('');
+  const [selectedResult, setSelectedResult] = useState(null);
 
   const tabs = [
     { id: 'dataset', label: 'Server Document Dataset', icon: Database },
@@ -65,10 +66,11 @@ export default function App() {
                 onComplete={() => setActiveTab('preprocessing')}
               />
             )}
+            {/* BAGIAN YANG DIPERBAIKI DI BAWAH INI */}
             {activeTab === 'preprocessing' && (
-              <TextPreprocessing
-                processedText={processedText}
-                uploadedFiles={uploadedFiles}
+              <TextPreprocessing 
+                selectedDoc={selectedResult} 
+                onBack={() => setActiveTab('upload')}
               />
             )}
             {activeTab === 'search' && (

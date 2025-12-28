@@ -1,6 +1,15 @@
 import { FileText, File, Database } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
-export function DatasetBrowser({ documents }) {
+export function DatasetBrowser() {
+  const [documents, setDocuments] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/documents')
+      .then(res => res.json())
+      .then(data => setDocuments(data));
+  }, []);
+
   const getFileIcon = (type) => {
     switch (type) {
       case '.pdf':

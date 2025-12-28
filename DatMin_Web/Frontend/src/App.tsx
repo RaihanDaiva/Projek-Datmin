@@ -55,7 +55,7 @@ export default function App() {
           {/* Tab Content */}
           <div className="p-8">
             {activeTab === 'dataset' && (
-              <DatasetBrowser documents={SERVER_DOCUMENTS} />
+              <DatasetBrowser />
             )}
             {activeTab === 'upload' && (
               <DocumentUpload

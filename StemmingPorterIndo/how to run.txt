@@ -1,0 +1,5 @@
+pip install -r requirements.txt
+
+process_file.py (nanti disuruh memasukkan nama file berserta ekstensinya pada lokasi root secara interaktif)
+
+atau bisa jalanin process_file.py di vscode (run python file)

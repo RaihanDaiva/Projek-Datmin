@@ -1,11 +1,16 @@
 import math
 
 # ---------- Step 1: Example Documents ----------
+# documents = [
+#     "Information retrieval is the process of finding relevant documents",
+#     "Vector space model represents documents as vectors",
+#     "We use cosine similarity for ranking in vector space model",
+#     "Retrieval and matching are core operations in IR systems"
+# ]
+
 documents = [
-    "Information retrieval is the process of finding relevant documents",
-    "Vector space model represents documents as vectors",
-    "We use cosine similarity for ranking in vector space model",
-    "Retrieval and matching are core operations in IR systems"
+    ['simpul', 'ndidik', 'era', 'gital', 'rluk', 'imbang', 'manfaat', 'teknolog', 'mpertahank', 'nila', 'nila', 'mbelajar', 'tradisional', 'ndekat', 'tepat', 'teknolog', 'tjad', 'alat', 'powerful', 'ningkatk', 'kualitas', 'ndidik', 'nciptak', 'generas', 'siap', 'khadap', 'tantang', 'masa', 'dep'], 
+    ['ndidik', 'mbelajar', 'era', 'gital', 'ndidik', 'rupak', 'aspek', 'fundamental', 'mbangun', 'sumber', 'daya', 'manusia', 'ndidik', 'masyarakat', 'ngembangk', 'ngetahu', 'ampil', 'sikap', 'rlu', 'khadap', 'baga', 'tantang', 'hidup', 'era', 'gital', 'pert', 'karang', 'mbelajar', 'kalam', 'transformas', 'signif', 'teknolog', 'informas', 'komunikas', 'kubah', 'cara', 'guru', 'kajar', 'siswa', 'ajar', 'mbelajar', 'batas', 'ruang', 'las', 'tradisional', 'laku', 'daring', 'mana', 'rkembang', 'teknolog', 'ndidik', 'bawa', 'dampak', 'positif', 'negatif', 'satu', 'sis', 'teknolog', 'mudahk', 'akses', 'hadap', 'baga', 'sumber', 'ajar', 'siswa', 'kakses', 'rpustaka', 'gital', 'kikut', 'kursus', 'online', 'kolaboras', 'lajar', 'baga', 'negara', 'sis', 'lain', 'gantung', 'teknolog', 'kurang', 'interaks', 'sosial', 'langsung', 'ampil', 'komunikas', 'interpersonal', 'ndidik', 'rlu', 'adaptas', 'rubah', 'kuasa', 'teknolog', 'mbelajar', 'ngintegrasik', 'tode', 'ngajar', 'efektif', 'latih', 'guru', 'lanjut', 'tjad', 'nting', 'mastik', 'kualitas', 'ndidik', 'tetap', 'jaga', 'simpul', 'ndidik', 'era', 'gital', 'rluk', 'imbang', 'manfaat', 'teknolog', 'mpertahank', 'nila', 'nila', 'mbelajar', 'tradisional', 'ndekat', 'tepat', 'teknolog', 'tjad', 'alat', 'powerful', 'ningkatk', 'kualitas', 'ndidik', 'nciptak', 'generas', 'siap', 'khadap', 'tantang', 'masa', 'dep']
 ]
 
 # ---------- Step 2: Preprocess (Tokenize + Normalize) ----------
@@ -13,7 +18,25 @@ def tokenize(text):
     # Lowercase & simple split on spaces
     return text.lower().split()
 
-indexed_docs = [tokenize(doc) for doc in documents]
+indexed_docs = []
+for i, doc in enumerate(documents):
+    # If it's a list of words, assume already tokenized
+    if isinstance(doc, list):
+        # Verify that each element is a string
+        if not all(isinstance(token, str) for token in doc):
+            raise ValueError(f"Document at index {i} contains non-string tokens")
+        indexed_docs.append([token.lower() for token in doc])
+
+    # If it's a string, tokenize it
+    elif isinstance(doc, str):
+        indexed_docs.append(tokenize(doc))
+
+    else:
+        raise ValueError(
+            f"Document at index {i} must be a string or list of strings, got {type(doc)}"
+        )
+
+# indexed_docs = [tokenize(doc) for doc in documents]
 print("\n<=========== Indexed/Tokenized Docs ============> START")
 print(indexed_docs)
 print("<=========== Indexed/Tokenized Docs ============> END\n")
@@ -37,6 +60,7 @@ doc_vectors = [vectorize(doc) for doc in indexed_docs]
 
 # ---------- Step 5: Query ----------
 query = "vector space retrieval"
+# query = "Siswa Sosial Sumber"
 q_tokens = tokenize(query)
 query_vec = vectorize(q_tokens)
 

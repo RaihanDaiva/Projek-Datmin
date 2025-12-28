@@ -73,7 +73,6 @@ export default function App() {
             )}
             {activeTab === 'search' && (
               <SimilaritySearch
-                documents={SERVER_DOCUMENTS}
                 uploadedFiles={uploadedFiles}
               />
             )}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Search, TrendingUp, FileText, Database, Upload as UploadIcon } from 'lucide-react';
 
 // Indonesian stopwords
@@ -156,19 +156,26 @@ const calculateSimilarity = (query, documents, uploadedFiles) => {
   return combinedResults;
 };
 
-export function SimilaritySearch({ documents, uploadedFiles }) {
+export function SimilaritySearch({ uploadedFiles }) {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
   const [hasSearched, setHasSearched] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [serverDocuments, setServerDocuments] = useState([]);
+
+  // Fetch server documents from backend
+  useEffect(() => {
+    fetch('http://localhost:5000/documents')
+      .then(res => res.json())
+      .then(data => setServerDocuments(data));
+  }, []);
 
   const handleSearch = () => {
     if (query.trim()) {
       setIsProcessing(true);
-      
-      // Simulate processing delay
       setTimeout(() => {
-        const similarityResults = calculateSimilarity(query, documents, uploadedFiles);
+        // Pastikan dokumen server diambil dari state
+        const similarityResults = calculateSimilarity(query, serverDocuments, uploadedFiles);
         setResults(similarityResults);
         setHasSearched(true);
         setIsProcessing(false);
@@ -226,7 +233,7 @@ export function SimilaritySearch({ documents, uploadedFiles }) {
         <div className="flex items-center justify-between mt-4">
           <div className="flex items-center gap-4">
             <p className="text-gray-500">
-              Searching in: <span className="text-gray-700">{documents.length} server documents</span>
+              Searching in: <span className="text-gray-700">{serverDocuments.length} server documents</span>
               {uploadedFiles.length > 0 && <span className="text-gray-700"> + {uploadedFiles.length} uploaded files</span>}
             </p>
           </div>

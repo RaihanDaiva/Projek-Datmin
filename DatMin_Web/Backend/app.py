@@ -7,11 +7,13 @@ from filtering import StopwordFilter
 from indonesian_porter_stemmer import IndonesianPorterStemmer
 from preprocessing_pipeline import PreprocessingPipeline
 from vector_space_model import VectorSpaceModel  # TIDAK DIUBAH
+from LSI.lsi_helper import LSIModel
 
 app = Flask(__name__)
 CORS(app)
 
-UPLOAD_FOLDER = os.path.join(os.getcwd(), 'Projek/DatMin_Web/Backend/uploads')
+# UPLOAD_FOLDER = os.path.join(os.getcwd(), 'Projek/DatMin_Web/Backend/uploads')
+UPLOAD_FOLDER = os.path.join('./uploads')
 
 # ======================
 # INISIALISASI PIPELINE
@@ -137,19 +139,24 @@ def search():
     doc_tokens = pipeline.process_documents(documents_raw)
 
     # 4. VSM
-    vsm = VectorSpaceModel(doc_tokens)
+    # vsm = VectorSpaceModel(doc_tokens)
+    lsi_model = LSIModel(documents_raw, k=2)
 
     # 5. Preprocess query
     query_tokens = pipeline.process_query(query)
     query_string = " ".join(query_tokens)
 
     # 6. Matching
-    results = vsm.match(query_string)
+    # results = vsm.match(query_string)
+    results = lsi_model .match(query_string)
 
     response = []
 
     # 7. Loop hasil
-    for rank, (doc_id, score) in enumerate(results, start=1):
+    # print(results)
+    for rank, result in enumerate(results, start=1):
+        doc_id = result["doc_id"]
+        score = result["score"]
         if doc_id < 0 or doc_id >= len(documents_raw):
             continue
 

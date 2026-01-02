@@ -8,6 +8,7 @@ from indonesian_porter_stemmer import IndonesianPorterStemmer
 from preprocessing_pipeline import PreprocessingPipeline
 from vector_space_model import VectorSpaceModel  # TIDAK DIUBAH
 from LSI.lsi_helper import LSIModel
+from GVSM.gvsm import GVSMModel
 
 app = Flask(__name__)
 CORS(app)
@@ -139,16 +140,27 @@ def search():
     doc_tokens = pipeline.process_documents(documents_raw)
 
     # 4. VSM
+    # Option 1
     # vsm = VectorSpaceModel(doc_tokens)
-    lsi_model = LSIModel(documents_raw, k=2)
+
+    # Option 2
+    # lsi_model = LSIModel(documents_raw, k=2)
+
+    # Option 3
+    # print("===========> doc_tokens", doc_tokens)
+    # print("===========> documents_raw", documents_raw)
+    gvsm = GVSMModel(doc_tokens)
 
     # 5. Preprocess query
     query_tokens = pipeline.process_query(query)
     query_string = " ".join(query_tokens)
+    query_string = query_string.lower().split() # Tokenize Query Input
+    print("===============>  ", query_string)
 
     # 6. Matching
     # results = vsm.match(query_string)
-    results = lsi_model .match(query_string)
+    # results = lsi_model.match(query_string)
+    results = gvsm.match(query_string)
 
     response = []
 

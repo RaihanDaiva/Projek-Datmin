@@ -4,12 +4,12 @@ import math
 # 1. Data
 # -----------------------------
 documents = [
-    "information retrieval model",
-    "generalized vector space model",
+    "Pendidikan dan Pembelajaran di Era Digital Pendidikan merupakan aspek fundamental dalam pembangunan sumber daya manusia. Melalui pendidikan, masyarakat dapat mengembangkan pengetahuan, keterampilan, dan sikap yang diperlukan untuk menghadapi berbagai tantangan kehidupan. Dalam era digital seperti sekarang ini, pembelajaran mengalami transformasi yang sangat signifikan. Teknologi informasi dan komunikasi telah mengubah cara guru mengajar dan siswa belajar. Pembelajaran tidak lagi terbatas pada ruang kelas tradisional, tetapi dapat dilakukan secara daring dari mana saja. Perkembangan teknologi pendidikan membawa dampak positif dan negatif. Di satu sisi, teknologi memudahkan akses terhadap berbagai sumber belajar. Siswa dapat mengakses perpustakaan digital, mengikuti kursus online, dan berkolaborasi dengan pelajar dari berbagai negara. Di sisi lain, ketergantungan pada teknologi dapat mengurangi interaksi sosial langsung dan keterampilan komunikasi interpersonal. Para pendidik perlu beradaptasi dengan perubahan ini. Mereka harus menguasai teknologi pembelajaran dan mengintegrasikannya dengan metode pengajaran yang efektif. Pelatihan guru secara berkelanjutan menjadi sangat penting untuk memastikan kualitas pendidikan tetap terjaga. Kesimpulannya, pendidikan di era digital memerlukan keseimbangan antara pemanfaatan teknologi dan mempertahankan nilai-nilai pembelajaran tradisional. Dengan pendekatan yang tepat, teknologi dapat menjadi alat yang powerful untuk meningkatkan kualitas pendidikan dan menciptakan generasi yang siap menghadapi tantangan masa depan.",
+    "Pembelajaran Pendidikan Mandiri",
     "retrieval of information"
 ]
 
-query = "retrieval of information"
+query = "pembelajaran"
 
 # -----------------------------
 # 2. Tokenization

@@ -97,7 +97,21 @@ class GVSMModel:
         numerator = self._dot(d, Sq)
         denominator = math.sqrt(self._dot(d, Sd)) * math.sqrt(self._dot(q, Sq))
 
-        return numerator / denominator if denominator != 0 else 0.0
+        if denominator == 0:
+            return 0.0
+
+        score = numerator / denominator
+
+        # 🔒 Clamp score agar tetap di [0, 1]
+        return max(0.0, min(1.0, score))
+
+    def _normalize(self, vec):
+        norm = math.sqrt(sum(v * v for v in vec))
+        if norm == 0:
+            return vec
+        return [v / norm for v in vec]
+
+
 
     # -----------------------------
     # Public API (Flask-safe)
@@ -114,6 +128,8 @@ class GVSMModel:
             raise TypeError("query_tokens must contain only strings")
 
         q_vec = self._tf_vector(query_tokens)
+        q_vec = self._normalize(q_vec)
+
 
         scores = []
         for i, d_vec in enumerate(self.doc_vectors):

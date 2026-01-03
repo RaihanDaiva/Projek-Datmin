@@ -7,14 +7,14 @@ from filtering import StopwordFilter
 from indonesian_porter_stemmer import IndonesianPorterStemmer
 from preprocessing_pipeline import PreprocessingPipeline
 from vector_space_model import VectorSpaceModel  # TIDAK DIUBAH
-from LSI.lsi_helper import LSIModel
+from LSI.LSI_helper import LSIModel
 from GVSM.gvsm import GVSMModel
 
 app = Flask(__name__)
 CORS(app)
 
 # UPLOAD_FOLDER = os.path.join(os.getcwd(), 'Projek/DatMin_Web/Backend/uploads')
-UPLOAD_FOLDER = os.path.join('./uploads')
+UPLOAD_FOLDER = os.path.join('DatMin_Web/Backend/uploads')
 
 # ======================
 # INISIALISASI PIPELINE

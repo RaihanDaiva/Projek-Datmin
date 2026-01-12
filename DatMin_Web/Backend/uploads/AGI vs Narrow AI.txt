@@ -1,0 +1,5 @@
+Artificial General Intelligence (AGI) vs. Narrow AI
+
+Saat ini, semua kecerdasan buatan yang kita gunakan dikategorikan sebagai Narrow AI (AI Sempit), yang berarti sistem tersebut sangat ahli dalam satu tugas spesifik—seperti bermain catur atau mendeteksi wajah—tetapi tidak bisa melakukan hal lain di luar itu. Narrow AI tidak memiliki kesadaran atau pemahaman umum tentang dunia; ia hanya menjalankan fungsi matematis berdasarkan data yang dipelajarinya.
+
+Sebaliknya, Artificial General Intelligence (AGI) adalah konsep hipotetis tentang AI yang memiliki kecerdasan setara manusia, mampu belajar, bernalar, dan memecahkan berbagai masalah di berbagai domain yang belum pernah dipelajarinya sebelumnya. Meskipun AGI sering digambarkan dalam fiksi ilmiah, para ahli masih berdebat mengenai kapan, atau bahkan apakah, tingkat kecerdasan mesin yang fleksibel dan sadar ini dapat benar-benar dicapai.

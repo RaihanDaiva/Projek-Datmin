@@ -1,0 +1,5 @@
+Edge AI: Membawa Kecerdasan ke Perangkat Lokal
+
+Edge AI adalah paradigma komputasi di mana algoritma AI diproses langsung di perangkat lokal (seperti smartphone, kamera CCTV, atau sensor IoT), bukan dikirim ke cloud atau server pusat. Pendekatan ini mengatasi masalah latensi atau jeda waktu, memungkinkan respons real-time yang sangat krusial, misalnya pada mobil otonom yang harus mengerem mendadak saat melihat pejalan kaki.
+
+Selain kecepatan, Edge AI juga menawarkan privasi data yang lebih baik karena data sensitif tidak perlu meninggalkan perangkat pengguna. Hal ini mengurangi beban bandwidth jaringan secara signifikan dan memungkinkan perangkat pintar tetap berfungsi cerdas meskipun tidak terhubung ke internet, menjadikan teknologi AI lebih andal dan efisien untuk penggunaan sehari-hari.

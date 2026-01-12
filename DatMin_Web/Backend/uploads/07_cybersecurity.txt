@@ -1,0 +1,54 @@
+KEAMANAN SIBER (CYBERSECURITY)
+
+Keamanan siber adalah praktik melindungi sistem, jaringan, dan data dari serangan digital. Dengan meningkatnya ketergantungan pada teknologi digital, keamanan siber menjadi semakin penting.
+
+CIA Triad:
+Tiga prinsip fundamental keamanan informasi:
+- Confidentiality (Kerahasiaan): Hanya pihak authorized yang dapat mengakses informasi
+- Integrity (Integritas): Data tetap akurat dan tidak dimodifikasi tanpa izin
+- Availability (Ketersediaan): Sistem dan data dapat diakses saat dibutuhkan
+
+Jenis Ancaman:
+- Malware: Software berbahaya (virus, trojan, ransomware, spyware)
+- Phishing: Penipuan untuk mencuri informasi sensitif
+- DDoS Attack: Membanjiri sistem dengan traffic untuk membuatnya down
+- Man-in-the-Middle: Intersepsi komunikasi antar pihak
+- SQL Injection: Memasukkan kode SQL berbahaya
+- Zero-Day Exploit: Menyerang vulnerability yang belum dipatch
+
+Kriptografi:
+Ilmu mengamankan informasi melalui enkripsi. Jenis enkripsi:
+- Symmetric: Menggunakan satu key untuk enkripsi dan dekripsi (AES, DES)
+- Asymmetric: Menggunakan public dan private key (RSA, ECC)
+- Hashing: Fungsi satu arah untuk verifikasi integritas (SHA-256, MD5)
+
+Authentication dan Authorization:
+- Authentication: Memverifikasi identitas pengguna
+- Authorization: Menentukan akses yang dimiliki pengguna
+- Multi-Factor Authentication (MFA): Menggunakan multiple verification methods
+
+Network Security:
+- Firewall: Memfilter traffic masuk dan keluar
+- IDS/IPS: Intrusion Detection/Prevention System
+- VPN: Virtual Private Network untuk komunikasi aman
+- SSL/TLS: Protokol untuk komunikasi terenkripsi
+
+Security Best Practices:
+- Gunakan password yang kuat dan unik
+- Update software secara regular
+- Backup data secara teratur
+- Implementasi principle of least privilege
+- Security awareness training
+- Regular security audits dan penetration testing
+
+Incident Response:
+Proses menangani security breach:
+1. Preparation: Siap dengan tools dan procedures
+2. Detection: Identifikasi incident
+3. Containment: Batasi dampak
+4. Eradication: Hapus ancaman
+5. Recovery: Restore sistem
+6. Lessons Learned: Analisis dan improve
+
+Compliance dan Regulations:
+GDPR, HIPAA, PCI-DSS, dan standar lain yang mengatur perlindungan data dan privacy.

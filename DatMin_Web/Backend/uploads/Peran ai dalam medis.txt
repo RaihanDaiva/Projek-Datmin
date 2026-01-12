@@ -1,0 +1,5 @@
+Peran AI dalam Diagnosis Medis
+
+Dalam dunia kesehatan, AI berfungsi sebagai asisten canggih bagi dokter, terutama dalam bidang radiologi dan patologi. Algoritma pembelajaran mesin dilatih dengan ribuan citra medis seperti sinar-X, CT scan, atau MRI untuk mendeteksi anomali seperti tumor, retak tulang, atau tanda-tanda awal kanker dengan tingkat akurasi yang sering kali menyamai atau bahkan melampaui spesialis manusia.
+
+Namun, peran AI di sini bukanlah untuk menggantikan dokter, melainkan untuk mempercepat proses triase dan mengurangi kesalahan diagnosis akibat kelelahan manusia. Dengan AI yang menangani analisis data rutin yang melelahkan, tenaga medis dapat lebih fokus pada pengambilan keputusan klinis yang kompleks dan memberikan pendekatan yang lebih personal serta empatik kepada pasien.

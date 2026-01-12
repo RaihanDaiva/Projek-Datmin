@@ -1,0 +1,14 @@
+Topik: Jaringan Komputer
+
+Jaringan Komputer merupakan salah satu bidang penting dalam ilmu komputer.
+Bidang ini banyak digunakan dalam pengembangan teknologi modern dan
+memiliki peran besar dalam dunia industri maupun akademik.
+
+Dalam jaringan komputer, mahasiswa mempelajari konsep dasar, teori,
+serta implementasi praktis menggunakan berbagai bahasa pemrograman
+dan alat bantu. Pemahaman yang baik terhadap topik ini akan membantu
+dalam memecahkan masalah komputasi secara efisien dan terstruktur.
+
+Penerapan jaringan komputer dapat ditemukan dalam kehidupan sehari-hari,
+seperti pada aplikasi mobile, sistem informasi, perangkat keras,
+hingga layanan berbasis internet.

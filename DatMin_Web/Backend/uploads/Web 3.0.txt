@@ -1,0 +1,5 @@
+Evolusi Web 3.0 dan Desentralisasi
+
+Web 3.0 digadang-gadang sebagai masa depan internet yang berfokus pada desentralisasi, keamanan privasi, dan kepemilikan data oleh pengguna melalui teknologi blockchain. Berbeda dengan Web 2.0 di mana data terpusat di server perusahaan raksasa teknologi, Web 3.0 memungkinkan interaksi peer-to-peer tanpa perantara, di mana pengguna memiliki kendali penuh atas identitas dan aset digital mereka (seperti cryptocurrency atau NFT).
+
+Meskipun masih dalam tahap awal adopsi, konsep ini menjanjikan perubahan fundamental dalam cara kerja website. Aplikasi web di era ini (disebut dApps atau Decentralized Apps) tidak berjalan di satu server pusat, melainkan di jaringan komputer yang tersebar, membuatnya lebih tahan terhadap sensor dan kegagalan sistem. Ini membuka peluang baru bagi ekonomi kreator yang lebih adil dan internet yang lebih terbuka serta transparan.

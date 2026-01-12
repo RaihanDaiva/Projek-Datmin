@@ -1,0 +1,5 @@
+Keamanan Web: Protokol HTTPS dan SSL
+
+HTTPS (Hypertext Transfer Protocol Secure) adalah versi aman dari protokol standar web yang menggunakan enkripsi untuk melindungi komunikasi data antara browser pengguna dan server website. Teknologi ini bekerja dengan sertifikat SSL/TLS yang mengacak data sensitif—seperti kata sandi, nomor kartu kredit, atau data pribadi—sehingga tidak bisa dibaca oleh peretas yang mencoba menyadap jaringan (man-in-the-middle attack).
+
+Keberadaan ikon gembok hijau di bilah alamat browser kini menjadi standar wajib bagi kepercayaan pengguna. Website yang masih menggunakan protokol HTTP lama akan ditandai sebagai "Tidak Aman" oleh browser modern, yang dapat membuat pengunjung takut dan segera meninggalkan situs tersebut. Selain aspek keamanan, penggunaan HTTPS juga menjadi salah satu faktor peringkat yang diperhitungkan oleh algoritma Google untuk menentukan kredibilitas sebuah website.

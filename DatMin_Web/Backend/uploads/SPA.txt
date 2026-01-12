@@ -1,0 +1,5 @@
+Era Single Page Application (SPA)
+
+Single Page Application (SPA) adalah jenis aplikasi web modern yang memuat satu halaman HTML tunggal dan memperbarui konten secara dinamis saat pengguna berinteraksi, tanpa perlu memuat ulang (reload) seluruh halaman. Teknologi ini, yang dipopulerkan oleh framework JavaScript seperti React, Vue, dan Angular, memberikan pengalaman pengguna yang sangat mulus dan cepat, menyerupai kenyamanan menggunakan aplikasi desktop atau aplikasi mobile asli (native apps).
+
+Dalam arsitektur SPA, sebagian besar sumber daya (HTML, CSS, JavaScript) dimuat di awal sesi, dan data selanjutnya diambil dari server melalui API (Application Programming Interface) di latar belakang. Hal ini mengurangi beban server dan konsumsi bandwidth secara drastis karena browser hanya perlu mengambil data mentah (biasanya dalam format JSON) alih-alih mengunduh ulang seluruh tampilan halaman setiap kali pengguna mengklik menu baru.

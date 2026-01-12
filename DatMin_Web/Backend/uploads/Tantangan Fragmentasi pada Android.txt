@@ -1,0 +1,5 @@
+Tantangan Fragmentasi pada Android
+
+Salah satu mimpi buruk terbesar bagi pengembang aplikasi Android adalah fragmentasi perangkat yang sangat luas. Berbeda dengan iOS yang dikontrol ketat oleh Apple, Android berjalan di ribuan jenis perangkat dengan ukuran layar, spesifikasi hardware, dan versi sistem operasi yang berbeda-beda. Hal ini memaksa tim pengembang untuk melakukan pengujian ekstensif guna memastikan aplikasi tidak crash atau berantakan tampilannya saat dijalankan di ponsel murah maupun ponsel flagship.
+
+Fragmentasi ini juga berdampak pada adopsi fitur baru; pengembang sering kali harus menahan diri menggunakan teknologi terkini agar aplikasi mereka tetap kompatibel dengan versi Android lama yang masih banyak dipakai pengguna. Meskipun Google telah berupaya mengatasinya dengan alat kompatibilitas seperti Android Jetpack, keragaman ekosistem ini tetap menjadi tantangan teknis yang memakan sumber daya besar dalam siklus pemeliharaan aplikasi.

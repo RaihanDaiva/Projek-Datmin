@@ -1,0 +1,5 @@
+Ancaman Deepfake dan Manipulasi Digital
+
+Deepfake adalah produk dari teknologi Generative Adversarial Networks (GANs) yang mampu memanipulasi video atau audio untuk membuat seseorang terlihat atau terdengar melakukan hal yang sebenarnya tidak pernah mereka lakukan. Dengan menempelkan wajah seseorang ke tubuh orang lain secara sangat realistis, teknologi ini menimbulkan kekhawatiran serius terkait penyebaran hoaks, fitnah politik, dan pornografi non-konsensual.
+
+Di sisi lain, deteksi deepfake kini menjadi perlombaan senjata antara pembuat konten palsu dan peneliti keamanan siber. Sementara teknologi sintesis wajah semakin halus dan sulit dibedakan oleh mata telanjang, algoritma forensik digital terus dikembangkan untuk mendeteksi jejak artifisial mikroskopis pada piksel video, demi menjaga integritas informasi di era digital yang rentan manipulasi.

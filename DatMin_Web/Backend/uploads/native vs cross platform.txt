@@ -1,0 +1,5 @@
+Perdebatan Native vs Cross-Platform
+
+Pengembangan aplikasi native melibatkan pembuatan kode khusus untuk satu sistem operasi tertentu, seperti Swift untuk iOS atau Kotlin untuk Android. Pendekatan ini menawarkan performa tertinggi dan akses penuh ke fitur perangkat keras (kamera, GPS, sensor) secara mulus, menghasilkan pengalaman pengguna yang sangat responsif dan stabil. Namun, kelemahannya adalah biaya dan waktu pengembangan yang berlipat ganda karena pengembang harus membangun dua aplikasi terpisah untuk menjangkau seluruh pasar.
+
+Di sisi lain, kerangka kerja cross-platform seperti Flutter atau React Native memungkinkan pengembang menulis satu basis kode yang dapat berjalan di kedua sistem operasi sekaligus. Teknologi ini sangat populer di kalangan startup karena efisiensi waktu dan biaya yang ditawarkannya, mempercepat proses peluncuran produk ke pasar (time-to-market). Meskipun dulu dianggap memiliki performa di bawah aplikasi native, kemajuan teknologi saat ini membuat kesenjangan tersebut semakin tipis, bahkan hampir tidak bisa dibedakan oleh pengguna awam.

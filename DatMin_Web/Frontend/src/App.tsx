@@ -14,8 +14,6 @@ export default function App() {
 
   const tabs = [
     { id: 'dataset', label: 'Server Document Dataset', icon: Database },
-    { id: 'upload', label: 'Upload Documents', icon: Upload },
-    { id: 'preprocessing', label: 'Text Preprocessing', icon: Layers },
     { id: 'search', label: 'Document Similarity Search', icon: Search },
   ];
 
@@ -24,7 +22,7 @@ export default function App() {
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <h1 className="text-gray-900">Indonesian Document Retrieval System</h1>
-          <p className="text-gray-600 mt-1">Document Upload, Preprocessing & Similarity Search</p>
+          <p className="text-gray-600 mt-1">Preprocessing & Similarity Search</p>
         </div>
       </header>
 

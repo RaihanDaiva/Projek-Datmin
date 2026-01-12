@@ -44,37 +44,43 @@ export function DatasetBrowser() {
         </div>
       </div>
 
-      {/* Documents Table */}
+      {/* Documents Table Section */}
       <div>
         <h3 className="text-gray-900 mb-4">Available Documents ({documents.length})</h3>
-        <div className="border border-gray-200 rounded-lg overflow-hidden">
-          <table className="w-full">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-6 py-3 text-left text-gray-700">Document Name</th>
-                <th className="px-6 py-3 text-left text-gray-700">File Type</th>
-                <th className="px-6 py-3 text-left text-gray-700">Status</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-200">
-              {documents.map((doc) => (
-                <tr key={doc.id} className="bg-white hover:bg-gray-50">
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-3">
-                      {getFileIcon(doc.type)}
-                      <span className="text-gray-900">{doc.name}</span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 text-gray-600">{doc.type}</td>
-                  <td className="px-6 py-4">
-                    <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full">
-                      {doc.status}
-                    </span>
-                  </td>
+        
+        {/* PERUBAHAN UTAMA DI SINI */}
+        <div className="border border-gray-200 rounded-lg overflow-hidden flex flex-col">
+          {/* Container Scrollable */}
+          <div className="overflow-y-auto max-h-96 relative">
+            <table className="w-full text-left border-collapse">
+              {/* Header dibuat Sticky */}
+              <thead className="bg-gray-50 sticky top-0 z-10 shadow-sm">
+                <tr>
+                  <th className="px-6 py-3 text-left text-gray-700 font-semibold bg-gray-50">Document Name</th>
+                  <th className="px-6 py-3 text-left text-gray-700 font-semibold bg-gray-50">File Type</th>
+                  <th className="px-6 py-3 text-left text-gray-700 font-semibold bg-gray-50">Status</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-gray-200 bg-white">
+                {documents.map((doc) => (
+                  <tr key={doc.id} className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-4">
+                      <div className="flex items-center gap-3">
+                        {getFileIcon(doc.type)}
+                        <span className="text-gray-900 font-medium">{doc.name}</span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 text-gray-600">{doc.type}</td>
+                    <td className="px-6 py-4">
+                      <span className="px-3 py-1 bg-green-100 text-green-700 text-sm font-medium rounded-full">
+                        {doc.status}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
@@ -82,15 +88,15 @@ export function DatasetBrowser() {
       <div className="grid grid-cols-3 gap-4">
         <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
           <p className="text-gray-600 mb-1">Total Documents</p>
-          <p className="text-gray-900">{documents.length}</p>
+          <p className="text-gray-900 font-bold">{documents.length}</p>
         </div>
         <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
           <p className="text-gray-600 mb-1">File Types</p>
-          <p className="text-gray-900">{new Set(documents.map(d => d.type)).size}</p>
+          <p className="text-gray-900 font-bold">{new Set(documents.map(d => d.type)).size}</p>
         </div>
         <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
           <p className="text-gray-600 mb-1">Status</p>
-          <p className="text-gray-900">All Available</p>
+          <p className="text-gray-900 font-bold">All Available</p>
         </div>
       </div>
     </div>

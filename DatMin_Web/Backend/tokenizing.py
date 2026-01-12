@@ -103,8 +103,3 @@ class Tokenizer:
                 print(f"(!!) Skip {file}: {e}")
 
         return results
-
-# tokenizer = Tokenizer()
-
-# tokens = tokenizer.process_file("/home/han/Documents/Kuliah/S5/Data Mining/Tokenizing/test/contoh.txt")
-# print(tokens)

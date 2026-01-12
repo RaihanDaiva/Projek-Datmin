@@ -1,0 +1,5 @@
+Arsitektur CNN
+
+CNN merupakan jenis Deep Learning yang dirancang khusus untuk memproses data berbentuk grid, seperti gambar atau video. Arsitektur ini bekerja dengan meniru cara kerja korteks visual manusia, menggunakan lapisan konvolusi untuk mengekstraksi fitur-fitur visual mulai dari garis sederhana hingga pola kompleks seperti wajah atau objek, menjadikannya tulang punggung dalam teknologi Computer Vision saat ini.
+
+Keunggulan utama CNN terletak pada efisiensinya dalam mengenali pola spasial tanpa perlu memposisikan objek di tempat yang spesifik dalam gambar (translation invariance). Melalui proses pooling dan flattening sebelum masuk ke lapisan fully connected, CNN mampu mereduksi dimensi data tanpa kehilangan informasi penting, sehingga komputer dapat mengklasifikasikan ribuan gambar dengan akurasi tinggi dalam waktu yang sangat singkat.

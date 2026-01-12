@@ -1,0 +1,5 @@
+Konsep Progressive Web Apps (PWA)
+
+Progressive Web Apps (PWA) adalah teknologi yang menjembatani kesenjangan antara website tradisional dan aplikasi mobile asli. PWA memungkinkan sebuah website untuk memiliki fitur-fitur canggih seperti kemampuan bekerja secara offline, menerima notifikasi (push notifications), dan bahkan dapat diinstal langsung ke layar utama smartphone pengguna tanpa harus melalui toko aplikasi (App Store atau Play Store).
+
+Keunggulan utama PWA adalah ukurannya yang sangat ringan dan kemampuannya untuk bekerja di kondisi jaringan yang buruk berkat teknologi Service Workers yang menyimpan cache aset penting. Bagi pengembang, ini adalah solusi efisien karena mereka hanya perlu memelihara satu basis kode web yang dapat berjalan di berbagai platform (Android, iOS, Desktop), menghemat biaya dan waktu pengembangan secara signifikan dibandingkan membuat aplikasi native terpisah.

@@ -1,0 +1,5 @@
+Revolusi Responsive Web Design
+
+Responsive Web Design adalah pendekatan desain yang memastikan tampilan website dapat beradaptasi secara otomatis dengan berbagai ukuran layar, mulai dari monitor desktop yang lebar hingga layar smartphone yang sempit. Menggunakan teknik media queries, tata letak website akan menjadi fleksibel dan "cair", sehingga pengguna tidak perlu melakukan zoom-in atau menggeser layar ke samping (scrolling horizontal) hanya untuk membaca konten.
+
+Pentingnya desain responsif semakin meningkat seiring dominasi penggunaan perangkat seluler dalam mengakses internet. Mesin pencari seperti Google kini menerapkan kebijakan mobile-first indexing, yang berarti performa dan tampilan versi seluler sebuah website menjadi faktor utama dalam penentuan peringkat di hasil pencarian. Website yang tidak responsif akan dianggap tidak ramah pengguna dan berpotensi kehilangan trafik organik secara signifikan.

@@ -1,0 +1,5 @@
+Pondasi Dasar Web: HTML dan CSS
+
+HTML (HyperText Markup Language) adalah tulang punggung dari setiap halaman web yang berfungsi untuk membangun struktur konten, seperti paragraf, judul, gambar, dan tautan. Tanpa HTML, browser tidak akan tahu bagaimana menampilkan teks atau elemen multimedia kepada pengguna. Kode ini bersifat semantik, artinya setiap tag memiliki arti tertentu yang membantu mesin pencari memahami konteks informasi yang disajikan di dalam halaman tersebut.
+
+Sementara itu, CSS (Cascading Style Sheets) berperan sebagai "kosmetik" yang mengatur tampilan visual dan tata letak dari struktur HTML yang sudah dibuat. CSS memungkinkan pengembang untuk mengubah warna, jenis font, jarak antar elemen, hingga animasi, membuat website tidak hanya fungsional tetapi juga estetis dan nyaman dipandang. Pemisahan antara struktur (HTML) dan desain (CSS) ini memudahkan pemeliharaan kode karena perubahan desain bisa dilakukan tanpa mengganggu konten aslinya.

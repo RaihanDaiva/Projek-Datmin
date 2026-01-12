@@ -9,7 +9,7 @@ documents = [
     "retrieval of information"
 ]
 
-query = "pembelajaran"
+query = "pendidikan digital"
 
 # -----------------------------
 # 2. Tokenization

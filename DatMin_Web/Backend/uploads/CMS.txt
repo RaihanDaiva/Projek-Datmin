@@ -1,0 +1,5 @@
+Peran Content Management System (CMS)
+
+Content Management System (CMS) seperti WordPress, Joomla, atau Drupal adalah perangkat lunak yang memungkinkan pengguna untuk membuat, mengelola, dan memodifikasi konten website tanpa memerlukan keahlian teknis pemrograman yang mendalam. Dengan antarmuka yang intuitif mirip pengolah kata, pengguna awam dapat mempublikasikan artikel, mengunggah gambar, atau menambah halaman baru hanya dalam hitungan menit.
+
+Kepopuleran CMS didorong oleh ekosistem plugin dan tema yang sangat luas, yang memungkinkan fungsionalitas website diperluas dengan mudah. Mulai dari fitur toko online, formulir kontak, hingga optimasi keamanan, semuanya bisa ditambahkan secara modular. Hal ini menjadikan CMS pilihan utama bagi usaha kecil hingga menengah (UKM) yang membutuhkan website profesional dengan biaya pengembangan yang relatif terjangkau dan waktu pengerjaan yang cepat.

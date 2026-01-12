@@ -1,0 +1,5 @@
+Fenomena Super App di Asia
+
+Super App adalah ekosistem aplikasi serba ada yang menggabungkan berbagai layanan—mulai dari transportasi, pesan-antar makanan, pembayaran digital, hingga hiburan—dalam satu platform tunggal. Dipopulerkan oleh raksasa teknologi Asia seperti WeChat, Gojek, dan Grab, konsep ini menawarkan kenyamanan luar biasa bagi pengguna yang tidak perlu lagi menginstal banyak aplikasi berbeda untuk memenuhi kebutuhan sehari-hari mereka.
+
+Keberhasilan Super App terletak pada integrasi sistem pembayaran digital (e-wallet) yang mengikat pengguna ke dalam ekosistem tersebut. Dengan satu saldo dompet digital yang bisa digunakan untuk semua transaksi, tingkat retensi pengguna menjadi sangat tinggi. Bagi penyedia layanan, model ini menciptakan tambang data perilaku konsumen yang sangat kaya, memungkinkan mereka menawarkan layanan yang lebih personal dan relevan secara lintas sektoral.

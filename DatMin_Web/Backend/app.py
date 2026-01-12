@@ -2,13 +2,14 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
 
+
 from tokenizing import Tokenizer
 from filtering import StopwordFilter
 from indonesian_porter_stemmer import IndonesianPorterStemmer
 from preprocessing_pipeline import PreprocessingPipeline
 from vector_space_model import VectorSpaceModel  # TIDAK DIUBAH
-from LSI.LSI_helper import LSIModel
 from GVSM.gvsm import GVSMModel
+from cache_utils import save_cache, load_cache
 
 app = Flask(__name__)
 CORS(app)
@@ -22,6 +23,57 @@ UPLOAD_FOLDER = os.path.join('DatMin_Web/Backend/uploads')
 tokenizer = Tokenizer()
 filtering = StopwordFilter()
 stemmer = IndonesianPorterStemmer()
+
+
+DOCUMENT_CACHE = None
+TOKEN_CACHE = None
+FILENAME_CACHE = None
+CACHE_PATH = os.path.join('DatMin_Web/Backend', 'preprocessing_cache.pkl')
+def get_uploads_state():
+    """Return a tuple of (filenames, mtimes) for all .txt, .docx, .pdf in uploads."""
+    state = []
+    for file in sorted(os.listdir(UPLOAD_FOLDER)):
+        ext = os.path.splitext(file)[1].lower()
+        if ext in {'.txt', '.docx', '.pdf'}:
+            path = os.path.join(UPLOAD_FOLDER, file)
+            try:
+                mtime = os.path.getmtime(path)
+                state.append((file, mtime))
+            except Exception:
+                continue
+    return state
+
+
+def load_documents_cached():
+    global DOCUMENT_CACHE, TOKEN_CACHE, FILENAME_CACHE
+
+    uploads_state = get_uploads_state()
+    cache = load_cache(CACHE_PATH)
+    if cache:
+        cached_state = cache.get('uploads_state')
+        if cached_state == uploads_state:
+            DOCUMENT_CACHE = cache['documents_raw']
+            TOKEN_CACHE = cache['doc_tokens']
+            FILENAME_CACHE = cache['file_names']
+            return DOCUMENT_CACHE, TOKEN_CACHE, FILENAME_CACHE
+
+    # If cache is missing or outdated, reload and reprocess
+    documents_raw, file_names = load_documents()
+    doc_tokens = pipeline.process_documents(documents_raw)
+
+    DOCUMENT_CACHE = documents_raw
+    TOKEN_CACHE = doc_tokens
+    FILENAME_CACHE = file_names
+
+    save_cache({
+        'uploads_state': uploads_state,
+        'documents_raw': documents_raw,
+        'doc_tokens': doc_tokens,
+        'file_names': file_names
+    }, CACHE_PATH)
+
+    return DOCUMENT_CACHE, TOKEN_CACHE, FILENAME_CACHE
+
 
 pipeline = PreprocessingPipeline(
     tokenizer=tokenizer,
@@ -131,13 +183,13 @@ def search():
         return jsonify([])
 
     # 3. Load & preprocessing dokumen
-    documents_raw, file_names = load_documents()
+    documents_raw, doc_tokens, file_names = load_documents_cached()
     
     # Pastikan file_names valid
     if not file_names:
         return jsonify({"error": "No documents found"}), 500
 
-    doc_tokens = pipeline.process_documents(documents_raw)
+    # doc_tokens sudah di-cache di load_documents_cached
 
     # 4. VSM
     # Option 1
@@ -150,6 +202,7 @@ def search():
     # print("===========> doc_tokens", doc_tokens)
     # print("===========> documents_raw", documents_raw)
     gvsm = GVSMModel(doc_tokens)
+
 
     # 5. Preprocess query
     query_tokens = pipeline.process_query(query)

@@ -1,0 +1,5 @@
+Konsep Reinforcement Learning pada Robotika Reinforcement Learning (RL)
+
+adalah metode pembelajaran mesin yang berbasis pada sistem penghargaan (reward) dan hukuman (punishment). Dalam konteks ini, sebuah agen AI belajar mengambil keputusan terbaik melalui trial and error (coba-coba) di dalam lingkungan simulasi; setiap tindakan yang benar akan diberi poin positif, sedangkan kesalahan akan diberi poin negatif, sehingga agen perlahan-lahan memahami strategi optimal untuk mencapai tujuan.
+
+Teknologi ini menjadi kunci utama dalam melatih robot otonom agar bisa beradaptasi dengan dunia fisik yang dinamis dan tidak terduga. Mulai dari robot lengan di pabrik yang belajar merakit komponen presisi hingga robot anjing yang belajar berjalan di medan berbatu, RL memungkinkan mesin untuk belajar dari pengalaman sendiri tanpa perlu diprogram secara eksplisit untuk setiap kemungkinan skenario yang mungkin terjadi.

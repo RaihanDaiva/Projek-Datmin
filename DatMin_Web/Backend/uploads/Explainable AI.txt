@@ -1,0 +1,5 @@
+Explainable AI (XAI) dan Transparansi Keputusan
+
+Sering kali, model Deep Learning dianggap sebagai "kotak hitam" (black box) karena proses pengambilan keputusannya sangat kompleks dan sulit dipahami bahkan oleh pembuatnya sendiri. Explainable AI (XAI) hadir sebagai solusi untuk membuat logika di balik keputusan AI dapat dijelaskan dan dimengerti oleh manusia, menjawab pertanyaan "mengapa" sebuah sistem menolak pinjaman nasabah atau mendiagnosis penyakit tertentu.
+
+Transparansi ini sangat vital dalam sektor-sektor yang diatur ketat oleh hukum dan memiliki dampak tinggi terhadap nyawa atau nasib seseorang. Tanpa kemampuan untuk menjelaskan alasan di balik output-nya, sulit bagi institusi keuangan, medis, atau hukum untuk mempercayai dan mengadopsi teknologi AI sepenuhnya, karena akuntabilitas menjadi hilang jika kesalahan terjadi tanpa bisa ditelusuri penyebabnya.

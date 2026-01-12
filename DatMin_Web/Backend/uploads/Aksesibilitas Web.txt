@@ -1,0 +1,5 @@
+Web Accessibility (Aksesibilitas Web)
+
+Aksesibilitas web (Web A11y) adalah praktik inklusif untuk memastikan bahwa website dapat digunakan oleh semua orang, termasuk penyandang disabilitas. Hal ini mencakup penggunaan kode HTML yang semantik agar dapat dibaca oleh alat pembaca layar (screen readers) bagi tunanetra, penyediaan kontras warna yang cukup bagi penderita buta warna, serta navigasi yang bisa dioperasikan sepenuhnya hanya menggunakan keyboard bagi mereka yang memiliki keterbatasan motorik.
+
+Menerapkan aksesibilitas bukan hanya soal kepatuhan hukum atau etika, tetapi juga memperluas jangkauan pasar. Website yang aksesibel cenderung memiliki struktur kode yang lebih rapi dan performa yang lebih baik, yang secara tidak langsung juga menguntungkan SEO. Dengan menghilangkan hambatan akses, pemilik website memastikan bahwa informasi atau layanan mereka dapat dinikmati secara setara oleh setiap individu tanpa diskriminasi.

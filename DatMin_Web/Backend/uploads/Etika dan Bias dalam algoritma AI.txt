@@ -1,0 +1,5 @@
+Etika dan Bias dalam Algoritma AI
+
+Salah satu tantangan terbesar dalam pengembangan AI adalah risiko bias algoritma yang diwariskan dari data latih (training data) buatan manusia. Jika data yang digunakan untuk melatih model mengandung prasangka sosial, rasial, atau gender, maka keputusan yang dihasilkan oleh AI—seperti dalam penyaringan lamaran kerja atau penilaian risiko kredit—akan melanggengkan diskriminasi tersebut secara otomatis dan sistematis.
+
+Oleh karena itu, bidang etika AI kini menjadi fokus utama, mendesak pengembang untuk menerapkan prinsip transparansi dan keadilan (fairness) dalam setiap model yang dibangun. Audit algoritma secara berkala dan penggunaan dataset yang inklusif sangat diperlukan untuk memastikan bahwa kecerdasan buatan tidak hanya cerdas secara teknis, tetapi juga adil dan tidak merugikan kelompok minoritas tertentu dalam penerapannya di dunia nyata.

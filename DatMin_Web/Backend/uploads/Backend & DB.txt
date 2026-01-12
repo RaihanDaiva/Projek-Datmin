@@ -1,0 +1,5 @@
+Backend Development dan Database
+
+Jika tampilan website adalah "wajah", maka backend adalah "otak" yang bekerja di balik layar untuk memproses logika bisnis dan pengelolaan data. Pengembangan backend melibatkan penulisan kode sisi server (menggunakan bahasa seperti PHP, Python, atau Node.js) yang menangani permintaan pengguna, melakukan perhitungan, dan berinteraksi dengan basis data untuk menyimpan atau mengambil informasi yang dinamis.
+
+Peran basis data (database) seperti MySQL, PostgreSQL, atau MongoDB sangat vital dalam ekosistem ini sebagai tempat penyimpanan data terpusat, mulai dari profil pengguna hingga katalog produk. Backend yang tangguh harus dirancang untuk memiliki performa tinggi, keamanan yang ketat terhadap serangan injeksi, serta skalabilitas agar mampu menangani lonjakan jumlah pengguna yang mengakses website secara bersamaan tanpa mengalami downtime.
